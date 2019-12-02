@@ -12,11 +12,11 @@ HOW TO USE
 1. Export your responses from Burp WITHOUT CONCATENATING.
 2. Use the file_splitter.py to clean the headers out of the output files:
   
-    file_splitter.py --file=<filename>
+    file_splitter.py --file=[filename]
 
 3. Use LinkedInJSONParser.py to parse and output the names, titles, and locations from the clean response file:
 
-    LinkedInJSONParser.py --file=<filename>
+    LinkedInJSONParser.py --file=[filename]
   
 Enjoy!
 
