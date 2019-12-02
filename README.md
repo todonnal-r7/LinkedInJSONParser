@@ -24,4 +24,6 @@ Enjoy!
 
 P.S. - A quick way to use this with the multiple files Burp kicks out is by using a simple Bash For loop like so:
 
-for f in ~/linkedinoutputfiles/*.json; do python LinkedInJSONParser.py --file=$f; done >> names_list.txt
+    for f in ~/linkedinoutputfiles/*.json; do python LinkedInJSONParser.py --file=$f; done >> names_list.txt
+
+The same can be done with the file splitter.
