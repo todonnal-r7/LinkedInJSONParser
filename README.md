@@ -1,4 +1,7 @@
 # LinkedInJSONParser
+
+(Modified July 14, 2020 due to LinkedIn modifications in output JSON data)
+
 A quick and VERY dirty Python based parser for LinkedIn output.
 
 This parser is designed to work with the JSON responses resulting from a search on LinkedIn. For example, when you're looking at a company's LinkedIn page and you click "Show all employees", the resulting list is provided as a JSON response from the LinkedIn API. Using Burp Suite Pro's Intruder tool, you can issue repeated requests to get responses containing all of the employees.
