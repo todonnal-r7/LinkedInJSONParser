@@ -1,5 +1,7 @@
 # LinkedInJSONParser
 
+TO DO: Update to Python3
+
 (Modified May 3, 2022 due to LinkedIn modifications in output JSON data)
 
 A quick and VERY dirty Python based parser for LinkedIn output.
