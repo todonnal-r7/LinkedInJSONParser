@@ -1,6 +1,6 @@
 # LinkedInJSONParser
 
-(Modified July 14, 2020 due to LinkedIn modifications in output JSON data)
+(Modified May 3, 2022 due to LinkedIn modifications in output JSON data)
 
 A quick and VERY dirty Python based parser for LinkedIn output.
 
@@ -23,7 +23,7 @@ HOW TO USE
   
 Enjoy!
 
--B1tWr4ngl3r
+-PapaHack
 
 P.S. - A quick way to use this with the multiple files Burp kicks out is by using a simple Bash For loop like so:
 
