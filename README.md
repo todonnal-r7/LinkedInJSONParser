@@ -1,9 +1,5 @@
 # LinkedInJSONParser
 
-TO DO: Update to Python3
-
-(Modified May 3, 2022 due to LinkedIn modifications in output JSON data)
-
 A quick and VERY dirty Python based parser for LinkedIn output.
 
 This parser is designed to work with the JSON responses resulting from a search on LinkedIn. For example, when you're looking at a company's LinkedIn page and you click "Show all employees", the resulting list is provided as a JSON response from the LinkedIn API. Using Burp Suite Pro's Intruder tool, you can issue repeated requests to get responses containing all of the employees.
@@ -14,20 +10,19 @@ This was hammered out very quickly one morning during a social engineering engag
 
 HOW TO USE
 --------------
-1. Export your responses from Burp WITHOUT CONCATENATING.
+1. Export your responses from Burp WITHOUT CONCATENATING so there's one file per response.
 2. Use the file_splitter.py to clean the headers out of the output files:
   
     file_splitter.py --file=[filename]
+    
+    EXAMPLE: for f in $(ls ~/linkedinoutputfiles/*); do python file_splitter.py --file=$f; done
 
 3. Use LinkedInJSONParser.py to parse and output the names, titles, and locations from the clean response file:
 
     LinkedInJSONParser.py --file=[filename]
+    
+    EXAMPLE: for f in $(ls ~/linkedinoutputfiles/*.json); do python LinkedInJSONParser.py --file=$f; done >> names_list.txt
   
 Enjoy!
 
 -PapaHack
-
-P.S. - A quick way to use this with the multiple files Burp kicks out is by using a simple Bash For loop like so:
-
-    for f in ~/linkedinoutputfiles/*; do python file_splitter.py --file=$f; done
-    for f in ~/linkedinoutputfiles/*.json; do python LinkedInJSONParser.py --file=$f; done >> names_list.txt

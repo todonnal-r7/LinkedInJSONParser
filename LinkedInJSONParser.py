@@ -16,11 +16,11 @@ if (len(jsonData['included']) > 1):
 		if (fullName == 'LinkedIn Member' or fullName == ''):
 			continue
 		else:
-			print(jsonData['included'][x]['title']['text']+":"+jsonData['included'][x]['primarySubtitle']['text'])+":"+jsonData['included'][x]['secondarySubtitle']['text']
+			print(jsonData['included'][x]['title']['text']+":"+jsonData['included'][x]['primarySubtitle']['text']+":"+jsonData['included'][x]['secondarySubtitle']['text'])
 else:
 	for x in range(10,len(jsonData['data']['elements'])):
 		fullName = jsonData['data']['elements'][x]['title']['text']
 		if (fullName == 'LinkedIn Member' or fullName == ''):
 			continue
 		else:
-			print(jsonData['data']['elements'][x]['title']['text']+":"+jsonData['data']['elements'][x]['primarySubtitle']['text'])+":"+jsonData['data']['elements'][x]['secondarySubtitle']['text']
+			print(jsonData['data']['elements'][x]['title']['text']+":"+jsonData['data']['elements'][x]['primarySubtitle']['text']+":"+jsonData['data']['elements'][x]['secondarySubtitle']['text'])
